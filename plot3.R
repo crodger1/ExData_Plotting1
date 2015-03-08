@@ -18,11 +18,11 @@ powerdf$datetime<-strptime(paste(powerdf$Date,powerdf$Time),"%d/%m/%Y %T")
 par(mfrow=c(1,1))
 png("plot3.png",width=480,height=480)
 
-plot(powerdf$datetime,powerdf$Sub_metering_1,type="l",col="black",
-     xlab="",ylab="Energy sub metering")
-points(powerdf$datetime,powerdf$Sub_metering_2,type="l",col="red")
-points(powerdf$datetime,powerdf$Sub_metering_3,type="l",col="blue")
-legend("topright",lty=c(1,1,1),col=c("black","red","blue"),
-       legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
+    plot(powerdf$datetime,powerdf$Sub_metering_1,type="l",col="black",
+         xlab="",ylab="Energy sub metering")
+    points(powerdf$datetime,powerdf$Sub_metering_2,type="l",col="red")
+    points(powerdf$datetime,powerdf$Sub_metering_3,type="l",col="blue")
+    legend("topright",lty=c(1,1,1),col=c("black","red","blue"),
+           legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
 
 dev.off()
